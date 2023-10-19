@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Feed } from './pages/Feed';
-import { Navbar } from './components/Navbar';
+import { Navbar } from './components/NavBar';
 import { Box } from '@mui/material';
 
 function App() {
