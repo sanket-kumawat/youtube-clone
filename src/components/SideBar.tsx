@@ -32,9 +32,11 @@ const categories = [
   { name: 'Crypto', icon: <DeveloperModeIcon /> },
 ];
 
-const selectedCategory = 'New';
 
-export const SideBar = () => {
+export const SideBar: React.FC<{
+  selectedCategory: string;
+  setSelectedCategory: React.Dispatch<React.SetStateAction<string>>;
+}> = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <Stack
       direction={'row'}
@@ -53,6 +55,9 @@ export const SideBar = () => {
             color: 'white',
           }}
           key={category.name}
+          onClick={() => {
+            setSelectedCategory(category.name);
+          }}
         >
           <span
             style={{
